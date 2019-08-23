@@ -89,7 +89,7 @@ class App extends React.Component {
     }, () => {
       // GET response from external API and pass data to
       // internal API before final update
-      fetch('http://localhost:3000/imageurl', {
+      fetch('https://shrouded-forest-76172.herokuapp.com/imageurl', {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -101,7 +101,7 @@ class App extends React.Component {
 
           // GET response from internal API and update user entries
           if (response !== 'Err1000: Clarifai Error') {
-            fetch('http://localhost:3000/image', {
+            fetch('https://shrouded-forest-76172.herokuapp.com:3000/image', {
               method: 'put',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
