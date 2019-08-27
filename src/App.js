@@ -101,7 +101,7 @@ class App extends React.Component {
 
           // GET response from internal API and update user entries
           if (response !== 'Err1000: Clarifai Error') {
-            fetch('https://shrouded-forest-76172.herokuapp.com:3000/image', {
+            fetch('https://shrouded-forest-76172.herokuapp.com/image', {
               method: 'put',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
